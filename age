@@ -1,0 +1,8 @@
+import datetime as d
+print("enter your name and age")
+n=input()
+a=int(input())
+current_year=int(d.datetime.now().year)
+by=current_year-a
+print("\nyou will turn 95 in the year")
+print(by+95)
