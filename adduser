@@ -1,0 +1,14 @@
+import os
+import crypt
+flag=0
+name=input("enter name of user")
+for i in name:
+    if   (i.isdigit()):
+          print("cannot add user")
+          flag=1
+          break
+    else: continue
+          
+password ="hello"+name 
+encpass = crypt.crypt(password,"22")
+os.system("useradd -p "+encpass+" "+name)
