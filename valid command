@@ -1,0 +1,24 @@
+#create file compg.py which contains all the valid commands 
+#using compgen command 
+import os
+import re
+flag=0
+cmnd=input("enter your command")
+f=open("ce.txt",'a')
+f.write(cmnd)
+q=open("compg.py",'r+')
+li=[]
+data=q.readlines()
+for q in data:
+    li.append(q)
+for i in li:
+    if i==cmnd:
+       flag=1
+       break
+    else:
+       continue
+if flag===1:
+   os.system(cmnd)
+   else:
+   print("command invalid")
+    
