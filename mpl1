@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+x=[2,3]
+y=[9,5]
+x1=[3,5,7]
+y1=[5,8,9]
+runs=[3,4,5]
+exp=[.1,.2,.1]
+player=["virat","dhoni","sachin"]
+plt.xlabel("time")
+plt.ylabel("speed")
+plt.plot(x,y,label="water") #this will draw a straight line 
+#plt.plot(x1,y1,label="sand")
+plt.scatter(x,y) #to show only points
+plt.grid(color='green')  #to form grid
+plt.legend() #to show labels with plot
+plt.xlim(0,12) #to show min and max number in x axis
+#plt.bar(x,y) #to plot bar graph
+plt.pie(runs,labels=player,explode=exp,shadow="true")
+plt.ylim(0,15)
+plt.show()
