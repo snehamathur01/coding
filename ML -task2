@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+import numpy as np
+b=np.arange(100,200,5)  #aranges random numbers between 100-200 in the form of 1-D array
+a=b[0:16].reshape(8,2)  #creating matrix of size 8x2
+print(a)
