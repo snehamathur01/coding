@@ -1,0 +1,13 @@
+#!usr/bin/python3
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+df=pd.read_csv('http://13.234.66.67/summer19/datasets/bank.csv')
+df.head(20)
+plt.bar(df.Tenure,df.Balance,color='green')
+plt.xlabel("Tenure")
+plt.ylabel("Balance")
+plt.show
+plt.pie(df.CreditScore,labels=df.Geography,shadow='true')
+plt.show()
+plt.scatter(df.CreditScore,	df.Geography,	df.Gender	,df.Age,df.Tenure,	df.Balance,df.NumOfProducts,	df.HasCrCard,	df.IsActiveMember,	df.EstimatedSalary)
