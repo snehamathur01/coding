@@ -1,0 +1,39 @@
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+#now loading iris data only
+iris=load_iris()
+dir(iris) #exploring variable
+iris.DESCR
+iris.feature_names
+iris.target_names
+#labels or answer
+iris.target_names
+#actual data with attributes is
+features=iris.data
+
+#features.shape
+#type(features)
+label=iris.target
+label.shape
+plt.xlabel("sepal length")
+plt.ylabel("sepal width")
+plt.scatter(SL,SW)
+plt.scatter(SL,SW)
+plt.legend()
+plt.show
+#now time for separating data into two categories
+#1--training data
+#2--testing data (questions)
+from sklearn.model_selection import train_test_split
+train_data,test_data,label_train,label_test=train_test_split(features,label,test_size=0.1,random_state=0) #random_state --no random values
+#calling decisiontree classifier
+clf=DecisionTreeClassifier()
+#now time for training clf
+trained=clf.fit(train_data,label_train)
+#now predicting flowers
+predicted_flowers=trained.predict(test_data)
+predicted_flowers
+label_test #actual answer
+accuracy_score(label_test,predicted_flowers)
