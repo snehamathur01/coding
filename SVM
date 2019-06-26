@@ -1,0 +1,30 @@
+from sklearn.datasets import load_digits
+#loading digit data
+digit=load_digits()
+#desc
+dir(digit)
+#features
+features=digit.data
+#LABEL
+label=digit.target
+#training and testing
+from sklearn.model_selection import train_test_split
+X,x,Y,y=train_test_split(features,label,test_size=0.2)
+#data visualize
+import matplotlib.pyplot as plt
+plt.imshow(digit.images[0])
+#now calling SVC
+from sklearn.svm import SVC
+#calling clf
+SVC()
+clf=SVC()
+#now training my clf
+trained=clf.fit(X,Y)
+#now training my clf
+trained=clf.fit(X,Y)
+#now time for predictionfrom sklearn.metrics import accuracy_score
+output=trained.predict(x)
+output
+y
+from sklearn.metrics import accuracy_score
+accuracy_score(output,y)
