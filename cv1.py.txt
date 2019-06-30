@@ -1,0 +1,14 @@
+import cv2
+#version
+print(cv2.__version__)
+#image name as first argument
+data="butterfly.jpeg"
+#image read
+img=cv2.imread(data,1)  #loading image in a coloured format --original image
+print(img)
+#shape
+print(img.shape)
+#height,width,color channel
+#to show the image
+cv2.imshow('windowname',img)
+cv2.waitKey(0) #holding window for infinite time
