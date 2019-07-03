@@ -1,0 +1,7 @@
+import cv2
+img=cv2.imread('butterfly.jpeg')
+blurimage=cv2.blur(img,(10,10))
+cv2.imshow('blurred image',blurimage) 
+  
+cv2.waitKey(0) 
+cv2.destroyAllWindows() 
