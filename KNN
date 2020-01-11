@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+from sklearn.neighbors import KNeighborsClassifier
+pd.read_csv("data1.csv")
+age=int(input("enter age"))
+salary=int(input("enter salary"))
+import math
+dist =[]
+pur=[]
+a=pd.read_csv("data1.csv")
+b=pd.read_csv("data2.csv")
+for i in range (0,10):
+    dist.append(math.sqrt((a.values[i,2]-age)**2 + (a.values[i,3]-salary)**2))
+    pur.append(a.values[i,4])
+print(dist)
+print(pur)
+for i in range(0,10):
+    for j in range(0,i-1):
+        if(dist[j]>dist[j+1]):
+            t=dist[j]
+            dist[j]=dist[j+1]
+            dist[j+1]=t
+            v=pur[j]
+            pur[j]=pur[j+1]
+            pur[j+1]=v
+print(dist)
+print(pur)
+import random
+c1=0
+c2=0
+k=random.choice([1,2,3,4,5,6,7,8,9])
+for i in range(0,k):
+    if(pur[i]=='yes'):
+        c1=c1+1
+    else:
+        c2=c2+1
+if(c1>c2):
+    print("yes")
+else:
+    print("no")
